@@ -8,8 +8,8 @@ jobs:
             run: echo "Hello World"
           - name: Runs multiple shell commands.
             run: |
-              node-v
-              nmp -v
+              node -v
+              npm -v
               cat /etc/os-release
           - name: Runs multiple commnds with >
             run: >      
