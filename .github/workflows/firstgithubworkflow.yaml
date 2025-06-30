@@ -1,0 +1,17 @@
+name: My First Workflow
+on: [push]
+jobs:
+    run-a-shell-command:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Runs a shell command
+            run: echo "Hello World"
+          - name: Runs multiple shell commands.
+            run: |
+              node-v
+              nmp -v
+              cat /etc/os-release
+          - name: Runs multiple commnds with >
+            run: >      
+                echo "Hello Rakesh" > Hello.txt
+                cat Hello.txt
