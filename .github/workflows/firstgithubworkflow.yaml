@@ -15,3 +15,9 @@ jobs:
             run: >      
                 echo "Hello Rakesh" > Hello.txt
                 cat Hello.txt
+    run-a-parallel-job:
+      runs-on: macos-latest
+      steps: 
+        - name: Runs a shell commad in macOS
+          run: sw_vers -productVersion
+         
