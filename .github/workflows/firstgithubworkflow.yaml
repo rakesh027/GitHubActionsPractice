@@ -20,4 +20,12 @@ jobs:
       steps: 
         - name: Runs a shell commad in macOS
           run: sw_vers -productVersion
+    run-a-dependent-job:
+      needs: run-a-shell-command
+      runs-on: windows-latest
+      steps:
+        - name: Runs a windows shell command
+          run: |
+            echo : "Hello from Windows"
+            Write-Output "Hello from Rakesh"
          
