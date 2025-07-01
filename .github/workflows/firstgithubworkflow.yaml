@@ -28,4 +28,7 @@ jobs:
           run: |
             echo : "Hello from Windows"
             Write-Output "Hello from Rakesh"
-         
+        - name: Error Step
+          run: |
+            echo "This step will fail"
+            exit 1"
