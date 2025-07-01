@@ -1,0 +1,11 @@
+name: Workflow Commands
+on: [push]
+jobs: 
+  run a workflow-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setting an error message
+        run: echo "::error::Missing Semi-colon"
+        uses: actions/checkout@v2
+      - name: Run a workflow-command
+        run: echo "Hello, World!"
