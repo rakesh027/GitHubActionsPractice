@@ -1,12 +1,13 @@
 name: WorkingDirectory and shell
 on: [push]
 jobs:
-    runs-on: ubuntu-latest
-    steps:
-        - name: Print the current working directory
-          run: |
-            echo "Current Working Directory"
-            pwd
-            echo "List of files and directories"
-            ls- al
-            echo $GITHUB_SHA
+    print-the-wd-information:
+       runs-on: ubuntu-latest
+        steps:
+          - name: Print the current working directory
+               run: |
+                 echo "Current Working Directory"
+                 pwd
+                 echo "List of files and directories"
+                 ls -al
+                 echo $GITHUB_SHA
