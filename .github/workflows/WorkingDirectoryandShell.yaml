@@ -19,5 +19,5 @@ jobs:
                 echo "Current Working Directory"
                 pwd
                 echo "List of files and directories"
-                ls -al
+                dir
                 echo $GITHUB_SHA
