@@ -12,6 +12,7 @@ jobs:
                 ls -al
                 echo $GITHUB_SHA
     print-the-wd-information-ONWindows:
+       needs: print-the-wd-information
        runs-on: windows-latest
        steps:
             - name: Print the working directory and list files
