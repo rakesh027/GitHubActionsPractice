@@ -3,11 +3,21 @@ on: [push]
 jobs:
     print-the-wd-information:
        runs-on: ubuntu-latest
-        steps:
-          - name: Print the current working directory
-               run: |
-                 echo "Current Working Directory"
-                 pwd
-                 echo "List of files and directories"
-                 ls -al
-                 echo $GITHUB_SHA
+       steps:
+            - name: Print the working directory and list files
+              run: |
+                echo "Current Working Directory"
+                pwd
+                echo "List of files and directories"
+                ls -al
+                echo $GITHUB_SHA
+    print-the-wd-information-ONWindows:
+       runs-on: windows-latest
+       steps:
+            - name: Print the working directory and list files
+              run: |
+                echo "Current Working Directory"
+                pwd
+                echo "List of files and directories"
+                ls -al
+                echo $GITHUB_SHA
