@@ -9,7 +9,7 @@ jobs:
                 echo "Current Working Directory"
                 pwd
                 echo "List of files and directories"
-                ls -
+                ls -l
                 echo $GITHUB_SHA
     print-the-wd-information-ONWindows:
        needs: print-the-wd-information
