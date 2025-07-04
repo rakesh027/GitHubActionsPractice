@@ -14,3 +14,5 @@ jobs:
                 git checkout main
             - name: List files after checkoutname
               run: ls -al
+            - name: Show current branch
+              run: git branch
