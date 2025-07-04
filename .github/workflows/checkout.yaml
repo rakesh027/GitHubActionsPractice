@@ -9,10 +9,10 @@ jobs:
             - name: checkout-repository
               run: |
                 git init
-                git remote add origin "https://$GUTHUB_ACTOR:${{secrest.GITHUB_TOKEN}}@github.com/$GITHUB_REPOSITORY.git"
+                git remote add origin "https://$GITHUB_ACTOR:${{secret.GITHUB_TOKEN}}@github.com/$GITHUB_REPOSITORY.git"
                 git fetch origin
                 git checkout main
-            - name: List files after checkoutname
+            - name: List files after checkout-complete
               run: ls -al
             - name: Show current branch
               run: git branch
