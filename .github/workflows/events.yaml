@@ -1,0 +1,16 @@
+name: events-by-workflow
+on: 
+    # push:
+    #     types: [created, updated, deleted]
+    pull_request:
+        types: [closed]
+    issues:
+        types: [closed_issue]
+jobs:
+    events-by-wordflow:
+        runs-on: ubuntu-latest
+        steps: 
+            - name: Checkout using actions/checkout.
+              uses: actions/checkout@v4
+            - name: List files after checkout complete.
+              run: ls -al
