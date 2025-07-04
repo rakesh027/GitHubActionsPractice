@@ -14,3 +14,4 @@ jobs:
               uses: actions/checkout@v4
             - name: List files after checkout complete.
               run: ls -al
+              run: echo "This is the workflow using the events"
