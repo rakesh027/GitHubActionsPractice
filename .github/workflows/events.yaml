@@ -13,4 +13,6 @@ jobs:
             - name: Checkout using actions/checkout.
               uses: actions/checkout@v4
             - name: List files after checkout complete.
-              run: ls -al
+              run: |
+                ls -al
+                echo "This is the workflow using the events"
